@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+
+}
+i{color: black;}
+
+header{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.6s;
+
+}
+header.sticky{
+  background: #1483D5;
+  padding: 15px 100px;
+}
+header .brand{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+header .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  color: black;
+  outline: none;
+  padding: 12px 40px;
+  position: relative;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:before,
+header .menu a:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 10px;
+}
+
+header .menu a:before {
+  border-top: 3px solid darkcyan;
+  right: 0;
+  top: -4px;
+}
+
+header .menu a:after {
+  border-bottom:3px solid darkcyan;
+  bottom: -4px;
+  left: 0;
+}
+
+header .menu a:hover:before,
+header .menu a:hover:after {
+  width: 100%;
+}
+
+header .btn{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+.section-two{
+  min-height: 100vh;
+  background: #001018;
+  padding: 20px 100px;
+}
+
+
+
+@media (max-width: 1000px){
+  header .btn{
+    display: block;
+  }
+
+  header .menu{
+    position: fixed;
+    background: #1483D5;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+.images{display: flex;}
+
+  header .menu.active{
+    right: 0;
+  }
+
+  header .menu .close-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a{
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+
+  .about_container{
+    position: relative;
+
+    width: 80%;
+    margin: auto;
+    clear: both;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px,auto));
+    grid-gap: 5px;
+
+  }
+
+  .wrap_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    margin: auto;
+    clear: both;
+
+  }
+  .cols1{
+grid-column: 1;
+text-align: center;
+
+  }
+  .cols{
+grid-column: 1/3;
+
+  }
+  .cols1 img{
+    width: auto;
+position: relative;
+left: 100px;
+    margin-bottom: 100px;
+    justify-content: center;
+  }
+  .c2{
+      line-height: 2em;
+    grid-column: 1/2;
+margin: auto;
+padding:300px;
+  }
+  .c3{
+    grid-column: 1/3;
+    margin: auto;
+
+  }
+  .c1{
+  line-height: 2em;
+margin: auto;
+
+  }
+  .c4{
+    position: relative;
+    top:9px;
+  }
+
+}
+
+
+.cols1 img{
+width:100%;
+position: relative;
+top:100px;
+
+}
+
+header img{
+  width: 20%;
+  border-radius: 60%;
+}
+.wrap_container{
+  width:90%;
+  position:relative;
+  top:50px;
+  display: grid;
+  grid-template-columns: repeat(2,65% 35%);
+  clear: both;
+  margin-bottom: 15%;
+}
+.cols{
+position: relative;
+top:15%;
+line-height: 2em;
+
+}
+
+.about_container{
+  position: relative;
+  top:80%;
+  width: 80%;
+  margin: auto;
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-auto-rows: minmax(200px, auto);
+
+}
+
+
+.c4{
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  width: 100%;
+  margin:auto;
+
+}
+#countdownTitle{
+text-align:center;
+font-size:20px;
+padding: 20px;
+}
+#countdownTimer, #dateTimeText {
+  display: flex;
+  justify-content: center;
+  color:black
+}
+#countdownTimer> div  {
+  text-align: center;
+  font-size: 3rem;
+  padding: 5px 5px;
+  width: 80%;
+}
+#countdownTimer> span{
+font-size:15px;
+position:relative;
+top:15px;
+}
+.about{
+  padding:15px;
+  border-radius: 15px;
+  border: 1px solid darkcyan;
+  text-align: center;}
+.c3 img{
+  width:50%;
+  align-items: center;
+  text-align: center;
+}
+footer{
+  color:darkcyan;
+  text-align: center;
+  padding:30px;
+}
